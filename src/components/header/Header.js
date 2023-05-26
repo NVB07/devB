@@ -36,7 +36,23 @@ function NavList({ setNav }) {
                 variant="small"
                 color="white"
                 className={`p-1 h-10 flex items-center rounded-md font-medium ${
-                    pathName == "/projects" ? "bg-blue-gray-900 text-blue-500" : ""
+                    /^\/blog(\/.*)?$/.test(pathName) ? "bg-blue-gray-900 text-blue-500" : ""
+                }`}
+            >
+                <Link
+                    href="/blog"
+                    className="flex items-center text-lg w-full rounded hover:text-blue-500 transition-colors"
+                >
+                    Blog
+                </Link>
+            </Typography>
+            <Typography
+                onClick={handleClick}
+                as="li"
+                variant="small"
+                color="white"
+                className={`p-1 h-10 flex items-center rounded-md font-medium ${
+                    /^\/projects(\/.*)?$/.test(pathName) ? "bg-blue-gray-900 text-blue-500" : ""
                 }`}
             >
                 <Link
@@ -52,7 +68,7 @@ function NavList({ setNav }) {
                 variant="small"
                 color="white"
                 className={`p-1 h-10 flex items-center rounded-md font-medium ${
-                    pathName == "/about" ? "bg-blue-gray-900 text-blue-500" : ""
+                    /^\/about(\/.*)?$/.test(pathName) ? "bg-blue-gray-900 text-blue-500" : ""
                 }`}
             >
                 <Link

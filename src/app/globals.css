@@ -18,6 +18,16 @@ body {
     /* cursor: url(https://cur.cursors-4u.net/cursors/cur-2/cur116.cur), progress; */
 }
 
+pre {
+    background: transparent !important;
+    background-color: #0000004f !important;
+    border-radius: 8px;
+}
+
+pre code {
+    font-size: 15px !important;
+}
+
 ::-webkit-scrollbar {
     width: 5px;
     height: 6px;
@@ -32,16 +42,6 @@ body {
 
 .prj {
     height: 2000px;
-}
-
-/* Custom cursor*/
-input[type="checkbox"]:hover,
-input[type="radio"]:hover,
-input[type="submit"]:hover,
-a:hover,
-image:hover,
-button:hover {
-    /* cursor: url(https://cur.cursors-4u.net/cursors/cur-2/cur117.cur), auto !important; */
 }
 
 .text-slider {
