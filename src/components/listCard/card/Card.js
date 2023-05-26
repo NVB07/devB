@@ -1,8 +1,10 @@
 import { FaPlay } from "react-icons/fa";
 import Image from "next/image";
-function Card({ title = "", srcImage, demo = "#", source = "#" }) {
+import Link from "next/link";
+
+function Card({ title = "", srcImage, demo = "#", path = "/projects", queryName = "", id = "" }) {
     return (
-        <div className="bg-[#0d0d14e0] w-[300px] max-w-[300px] min-w-[300px] rounded-md m-2">
+        <div className="bg-[#0d0d14e0] w-[280px] max-w-[280px] min-w-[280px] min-h-[300px] rounded-md m-2">
             <div className="p-4">
                 <Image
                     priority
@@ -21,12 +23,15 @@ function Card({ title = "", srcImage, demo = "#", source = "#" }) {
                         <FaPlay />
                         <span className="mx-1">Demo</span>
                     </a>
-                    <a
-                        href={source}
+                    <Link
+                        href={{
+                            pathname: path,
+                            query: { name: queryName, id: id },
+                        }}
                         className="flex h-10 px-3 justify-center items-center border border-[#ccc] transition-all hover:text-[var(--color-blue)] hover:border-[var(--color-blue)] rounded-lg"
                     >
                         View Source
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>

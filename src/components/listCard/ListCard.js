@@ -1,6 +1,6 @@
 import Card from "./card/Card";
 
-function ListCard() {
+function ListCard({ children = [] }) {
     const array = [
         {
             title: "Random (HTML, CSS, JS-canvas)",
@@ -17,25 +17,25 @@ function ListCard() {
         {
             title: "Random (HTML, CSS, JS-canvas)",
             srcImage: "/projects/random.png",
-            demo: "",
+            demo: "#",
             source: "",
         },
         {
             title: "Random (HTML, CSS, JS-canvas)",
             srcImage: "/projects/random.png",
-            demo: "",
+            demo: "#",
             source: "",
         },
         {
             title: "Random (HTML, CSS, JS-canvas)",
             srcImage: "/projects/random.png",
-            demo: "",
+            demo: "#",
             source: "",
         },
         {
             title: "Random (HTML, CSS, JS-canvas)",
             srcImage: "/projects/random.png",
-            demo: "",
+            demo: "#",
             source: "",
         },
     ];
@@ -43,7 +43,17 @@ function ListCard() {
     return (
         <div className="w-full flex overflow-x-scroll md:overflow-x-auto md:flex-wrap  h-fit">
             {array.map((item, index) => {
-                return <Card title={item.title} srcImage={item.srcImage} demo={item.demo} key={index} />;
+                return (
+                    <Card
+                        title={item.title}
+                        srcImage={item.srcImage}
+                        demo={item.demo}
+                        path="/projects/view-source"
+                        queryName={item.title}
+                        id={index}
+                        key={index}
+                    />
+                );
             })}
         </div>
     );
