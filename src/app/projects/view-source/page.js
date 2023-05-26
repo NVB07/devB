@@ -8,13 +8,13 @@ function Page() {
                 <div className="w-full">
                     <div className="html">
                         <div>HTML</div>
-                        <HighrLight language="xml" children='<label for="last-name">Last name</label>' />
+                        <HighrLight language="xml" code='<label for="last-name">Last name</label>' />
                     </div>
                     <div className="css">
                         <div>CSS</div>
                         <HighrLight
                             language="css"
-                            children={`body {
+                            code={`body {
     background-image: url(/mainbg.svg);
     background-size: auto;
     background-repeat: repeat;
@@ -26,7 +26,7 @@ function Page() {
                     <div className="js">
                         <div>javascript</div>
                         <HighrLight
-                            children={`<SyntaxHighlighter language="javascript" style={vscDarkPlus}>
+                            code={`<SyntaxHighlighter language="javascript" style={vscDarkPlus}>
     {children}
 </SyntaxHighlighter>
 export const metadata = {

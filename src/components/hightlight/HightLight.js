@@ -10,11 +10,11 @@ import {
     atomDark,
     coldarkCold,
 } from "react-syntax-highlighter/dist/esm/styles/prism";
-function HighrLight({ children = "Hello devB", language = "javascript" }) {
+function HighrLight({ code = "Hello devB", language = "javascript" }) {
     return (
         <>
             <SyntaxHighlighter language={language} style={vscDarkPlus}>
-                {children}
+                {code}
             </SyntaxHighlighter>
         </>
     );
