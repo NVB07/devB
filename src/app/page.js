@@ -10,7 +10,7 @@ export default function Home() {
                 </h1>
                 <div className=" whitespace-nowrap relative text-4xl ">
                     <p className=" text-4xl w-full text-center md:text-start pb-1 font-semibold">Front-End </p>
-                    <div className="text-2xl min-[400px]:text-[28px] md:text-3xl md:absolute flex justify-center relative">
+                    <div className="text-2xl min400:text-[28px] md:text-3xl md:absolute flex justify-center relative">
                         <TextSlider />
                     </div>
                 </div>

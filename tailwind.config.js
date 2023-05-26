@@ -16,6 +16,9 @@ module.exports = withMT({
                 "main-bg": "url('/bg-star.svg')",
             },
         },
+        screens: {
+            min400: "400px",
+        },
     },
     plugins: [],
 });
